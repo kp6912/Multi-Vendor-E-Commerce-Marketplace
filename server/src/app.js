@@ -1,11 +1,12 @@
 const express = require("express");
-const router = require("./routes/authRouters")
+
+const authRoutes= require("./routes/authRouters")
 
 
 const app = express();
 app.use(express.json());
 
-app.use("/api/auth" , router)
+app.use("/api/auth" , authRoutes)
 
 app.get("/",(req,res)=>{
     res.json({
